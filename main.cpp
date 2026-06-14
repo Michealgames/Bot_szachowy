@@ -695,6 +695,13 @@ int main()
         tab[i].push_back(p);
     }
 	StartPos(tab);
+	cout<<"Wybierz kolor (b/c)"<<endl;
+	char col;
+	cin>>col;
+	int color = 1;
+	if(col!='b')
+        color = -1;
+
 	int state = 1;
 	Move m;
 	//vector<Move> moves = MovesInPos(tab, state);
@@ -704,7 +711,7 @@ int main()
 	while(true)
 	{
 	    ShowBoard(tab);
-	    if(state==-1)
+	    if(state==color)
 	    {
 	        string start, end;
 	        int sX, sY, eX, eY;
